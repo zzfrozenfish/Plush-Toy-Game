@@ -32,17 +32,28 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            hips.AddForce(hips.transform.right * -strafeSpeed);
+            hips.AddForce(-hips.transform.right * strafeSpeed);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            hips.AddForce(hips.transform.forward * -speed);
+            hips.AddForce(-hips.transform.forward * speed);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             hips.AddForce(hips.transform.right * strafeSpeed);
         }
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            if (isGrounded)
+            {
+                hips.AddForce(new Vector3(0, jumpForce, 0));
+                isGrounded = false;
+            }
+        }
+
+        isGrounded = false;
     }
 }

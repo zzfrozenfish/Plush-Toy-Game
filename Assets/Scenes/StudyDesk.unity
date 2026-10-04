@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 40966736}
   - component: {fileID: 40966739}
   - component: {fileID: 40966741}
+  - component: {fileID: 40966743}
   - component: {fileID: 40966742}
   m_Layer: 8
   m_Name: Hips
@@ -409,9 +410,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 150
   strafeSpeed: 100
-  jumpForce: 0
+  jumpForce: 6000
   hips: {fileID: 40966739}
   isGrounded: 0
+--- !u!114 &40966743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40966734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &67491497
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +837,7 @@ GameObject:
   - component: {fileID: 205195520}
   - component: {fileID: 205195519}
   - component: {fileID: 205195518}
+  - component: {fileID: 205195523}
   m_Layer: 8
   m_Name: Right Foot
   m_TagString: Untagged
@@ -1052,6 +1067,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205195516}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &205195523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205195516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &229514367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,6 +1994,7 @@ GameObject:
   - component: {fileID: 349568745}
   - component: {fileID: 349568749}
   - component: {fileID: 349568750}
+  - component: {fileID: 349568751}
   m_Layer: 8
   m_Name: Left Shoulder
   m_TagString: Untagged
@@ -2195,6 +2224,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &349568751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349568744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &424313135
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,6 +3605,7 @@ GameObject:
   - component: {fileID: 511906174}
   - component: {fileID: 511906172}
   - component: {fileID: 511906173}
+  - component: {fileID: 511906178}
   m_Layer: 8
   m_Name: Left Leg
   m_TagString: Untagged
@@ -3794,6 +3837,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1589565040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
+--- !u!114 &511906178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511906171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &541602087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4907,6 +4963,7 @@ GameObject:
   - component: {fileID: 792377079}
   - component: {fileID: 792377082}
   - component: {fileID: 792377084}
+  - component: {fileID: 792377085}
   m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
@@ -5136,6 +5193,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &792377085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792377077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!43 &868205676
 Mesh:
   m_ObjectHideFlags: 0
@@ -5455,6 +5525,7 @@ GameObject:
   - component: {fileID: 944060744}
   - component: {fileID: 944060749}
   - component: {fileID: 944060750}
+  - component: {fileID: 944060751}
   m_Layer: 8
   m_Name: Left Hand
   m_TagString: Untagged
@@ -5684,6 +5755,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &944060751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944060743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &1041361836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5698,6 +5782,7 @@ GameObject:
   - component: {fileID: 1041361837}
   - component: {fileID: 1041361841}
   - component: {fileID: 1041361842}
+  - component: {fileID: 1041361843}
   m_Layer: 8
   m_Name: Right Shoulder
   m_TagString: Untagged
@@ -5927,6 +6012,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1041361843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041361836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!43 &1045555680
 Mesh:
   m_ObjectHideFlags: 0
@@ -6119,6 +6217,7 @@ GameObject:
   - component: {fileID: 1064559138}
   - component: {fileID: 1064559136}
   - component: {fileID: 1064559137}
+  - component: {fileID: 1064559142}
   m_Layer: 8
   m_Name: Left Thigh
   m_TagString: Untagged
@@ -6348,6 +6447,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1589565040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &1064559142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064559135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!43 &1093451363
 Mesh:
   m_ObjectHideFlags: 0
@@ -6718,6 +6830,7 @@ GameObject:
   - component: {fileID: 1244372014}
   - component: {fileID: 1244372013}
   - component: {fileID: 1244372012}
+  - component: {fileID: 1244372017}
   m_Layer: 8
   m_Name: Left Foot
   m_TagString: Untagged
@@ -6947,6 +7060,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244372010}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1244372017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244372010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &1251639433
 GameObject:
   m_ObjectHideFlags: 0
@@ -7652,6 +7778,7 @@ GameObject:
   - component: {fileID: 1302170008}
   - component: {fileID: 1302170006}
   - component: {fileID: 1302170007}
+  - component: {fileID: 1302170012}
   m_Layer: 8
   m_Name: Right Leg
   m_TagString: Untagged
@@ -7883,6 +8010,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1589565040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
+--- !u!114 &1302170012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302170005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &1365174099
 GameObject:
   m_ObjectHideFlags: 0
@@ -8956,6 +9096,7 @@ GameObject:
   - component: {fileID: 1486717904}
   - component: {fileID: 1486717908}
   - component: {fileID: 1486717909}
+  - component: {fileID: 1486717910}
   m_Layer: 8
   m_Name: Right Elbow
   m_TagString: Untagged
@@ -9187,6 +9328,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1486717910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486717903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &1495247111
 GameObject:
   m_ObjectHideFlags: 0
@@ -9201,6 +9355,7 @@ GameObject:
   - component: {fileID: 1495247114}
   - component: {fileID: 1495247112}
   - component: {fileID: 1495247113}
+  - component: {fileID: 1495247118}
   m_Layer: 8
   m_Name: Right Thigh
   m_TagString: Untagged
@@ -9430,6 +9585,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1589565040}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &1495247118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495247111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &1553583311
 GameObject:
   m_ObjectHideFlags: 0
@@ -10624,7 +10792,7 @@ GameObject:
   - component: {fileID: 1601232916}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -13793,6 +13961,7 @@ GameObject:
   - component: {fileID: 1665930570}
   - component: {fileID: 1665930574}
   - component: {fileID: 1665930575}
+  - component: {fileID: 1665930576}
   m_Layer: 8
   m_Name: Left Elbow
   m_TagString: Untagged
@@ -14024,6 +14193,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1665930576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665930569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &1669938410
 GameObject:
   m_ObjectHideFlags: 0
@@ -14150,6 +14332,7 @@ GameObject:
   - component: {fileID: 1674652329}
   - component: {fileID: 1674652334}
   - component: {fileID: 1674652335}
+  - component: {fileID: 1674652336}
   m_Layer: 8
   m_Name: Right Hand
   m_TagString: Untagged
@@ -14379,6 +14562,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1674652336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674652328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!43 &1720044794
 Mesh:
   m_ObjectHideFlags: 0
@@ -15242,6 +15438,7 @@ GameObject:
   - component: {fileID: 2034382225}
   - component: {fileID: 2034382228}
   - component: {fileID: 2034382230}
+  - component: {fileID: 2034382231}
   m_Layer: 8
   m_Name: Torso
   m_TagString: Untagged
@@ -15471,6 +15668,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2034382231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034382223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1 &2038763694
 GameObject:
   m_ObjectHideFlags: 0
@@ -16692,6 +16902,7 @@ GameObject:
   - component: {fileID: 2114324191}
   - component: {fileID: 2114324196}
   - component: {fileID: 2114324197}
+  - component: {fileID: 2114324198}
   m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
@@ -16924,6 +17135,19 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2114324198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114324190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da390ba1cbdda45a241fbd5b035e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LimbCollision
+  playerController: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
