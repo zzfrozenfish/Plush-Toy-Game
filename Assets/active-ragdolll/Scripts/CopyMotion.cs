@@ -5,27 +5,20 @@ using UnityEngine;
 public class CopyMotion : MonoBehaviour
 {
     public Transform targetLimb;
-    public bool mirror;
     ConfigurableJoint cj;
-    Quaternion startRot;
-
+    Vector3 startRot;
+    // Start is called before the first frame update
     void Start()
     {
         cj = GetComponent<ConfigurableJoint>();
-        // Memorizes how the limb was attached on frame 1
-        startRot = transform.localRotation;
+        startRot = targetLimb.localEulerAngles;
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (!mirror)
-        {
-            // Applies the animation using local space and the starting offset
-            cj.targetRotation = targetLimb.localRotation * startRot;
-        }
-        else
-        {
-            cj.targetRotation = Quaternion.Inverse(targetLimb.localRotation) * startRot;
-        }
+        cj.targetRotation =  Quaternion.Euler(startRot - targetLimb.localEulerAngles);
     }
 }
+
+
