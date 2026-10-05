@@ -405,7 +405,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!153 &40966741
 ConfigurableJoint:
@@ -552,7 +552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetLimb: {fileID: 904451978}
-  mirror: 0
 --- !u!1 &67491497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,7 +2377,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetLimb: {fileID: 360213924}
-  mirror: 0
 --- !u!1 &360213923
 GameObject:
   m_ObjectHideFlags: 0
@@ -5634,7 +5632,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetLimb: {fileID: 562844444}
-  mirror: 0
 --- !u!1 &851853450
 GameObject:
   m_ObjectHideFlags: 0
@@ -6797,7 +6794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetLimb: {fileID: 1018851660}
-  mirror: 0
 --- !u!43 &1045555680
 Mesh:
   m_ObjectHideFlags: 0
@@ -7247,7 +7243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetLimb: {fileID: 1886630763}
-  mirror: 0
 --- !u!43 &1093451363
 Mesh:
   m_ObjectHideFlags: 0
@@ -10545,7 +10540,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetLimb: {fileID: 1732675970}
-  mirror: 0
 --- !u!1 &1504996607
 GameObject:
   m_ObjectHideFlags: 0
@@ -17422,7 +17416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetLimb: {fileID: 2026301330}
-  mirror: 0
 --- !u!1 &2038763694
 GameObject:
   m_ObjectHideFlags: 0
@@ -18994,7 +18987,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   targetLimb: {fileID: 851853451}
-  mirror: 0
 --- !u!1 &2140382899
 GameObject:
   m_ObjectHideFlags: 0
