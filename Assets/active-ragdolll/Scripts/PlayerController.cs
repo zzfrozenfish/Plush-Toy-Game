@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator animator;
     public float speed; //forward&back
     public float strafeSpeed; //left&right
     public float jumpForce;
@@ -22,30 +23,53 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                animator.SetBool("isRun", true);
                 hips.AddForce(hips.transform.forward * speed * 1.5f);
             }
             else
             {
+                animator.SetBool("isRun", false);
                 hips.AddForce(hips.transform.forward * speed);
             }
+            animator.SetBool("isWalk", true);
+        }
+        else
+        {
+            animator.SetBool("isWalk", false);
+            animator.SetBool("isRun", false);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
+            animator.SetBool("isSideLeft", true);
             hips.AddForce(-hips.transform.right * strafeSpeed);
+        }
+        else
+        {
+            animator.SetBool("isSideLeft", false);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
+            animator.SetBool("isWalkBack", true);
             hips.AddForce(-hips.transform.forward * speed);
+        }
+        else
+        {
+            animator.SetBool("isWalkBack", false);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
+            animator.SetBool("isSideRight", true);
             hips.AddForce(hips.transform.right * strafeSpeed);
         }
+        else
+        {
+            animator.SetBool("isSideRight", false);
+        }
 
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             if (isGrounded)
             {
