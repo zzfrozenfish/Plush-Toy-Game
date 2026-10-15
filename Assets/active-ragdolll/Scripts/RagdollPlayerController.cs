@@ -80,6 +80,11 @@ public class RagdollPlayerController : MonoBehaviour
     private PlayerInput _playerInput;
 #endif
 
+    public Animator animator;
+    public Transform animationDummy;
+
+    public Rigidbody hips;
+
     private CharacterController _controller;
     private StarterAssetsInputs _input;
     private GameObject _mainCamera;
