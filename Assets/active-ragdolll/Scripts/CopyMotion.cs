@@ -1,24 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CopyMotion : MonoBehaviour
 {
     public Transform targetLimb;
-    ConfigurableJoint cj;
-    Vector3 startRot;
-    // Start is called before the first frame update
+    public bool mirror;
+
+    private ConfigurableJoint cj;
+    private Quaternion startingRotation;
+    private Quaternion targetStartingRotation;
+
     void Start()
     {
         cj = GetComponent<ConfigurableJoint>();
-        startRot = targetLimb.localEulerAngles;
+
+        // Memorize the exact starting poses of both the physical ragdoll and the animated dummy
+        startingRotation = transform.localRotation;
+        targetStartingRotation = targetLimb.localRotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        cj.targetRotation =  Quaternion.Euler(startRot - targetLimb.localEulerAngles);
+        // Calculate exactly how far the red dummy's limb has rotated since the game started
+        Quaternion rotationDifference = targetLimb.localRotation * Quaternion.Inverse(targetStartingRotation);
+
+        if (!mirror)
+        {
+            // Unity Configurable Joints require inverted rotations. 
+            // This applies the movement while maintaining your exact starting pose.
+            cj.targetRotation = Quaternion.Inverse(rotationDifference) * startingRotation;
+        }
+        else
+        {
+            // Flips the rotation for mirrored joints
+            cj.targetRotation = rotationDifference * startingRotation;
+        }
     }
 }
-
-

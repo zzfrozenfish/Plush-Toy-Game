@@ -17,17 +17,23 @@ public class CameraControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
+    {
+        CamControl();
+    }
+
+    void CamControl()
     {
         mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
         mouseY += Input.GetAxis("Mouse Y") * rotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, 35, 60);
+        mouseY = Mathf.Clamp(mouseY, -15, 20);
 
-        Quaternion rootRotation = Quaternion.Euler(0, mouseX + mouseY, 0);
+        Quaternion rootRotation = Quaternion.Euler(mouseY, mouseX, 0);
 
         root.rotation = rootRotation;
 
-        hipJoint.targetRotation = Quaternion.Euler(0, mouseX, 0);
-        torsoJoint.targetRotation = Quaternion.Euler(mouseY + torsoOffset, 0, 0);
+        hipJoint.targetRotation = Quaternion.Euler(0, -mouseX, 0);
+        torsoJoint.targetRotation = Quaternion.Euler(-mouseY + torsoOffset, 0, 0);
     }
+
 }
