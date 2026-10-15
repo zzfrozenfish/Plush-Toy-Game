@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class PlayerController : MonoBehaviour
 {
     public Animator animator;
@@ -24,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool isWalking;
     private bool isRunning;
     private bool isWalkBack;
+
 
     void Start()
     {
