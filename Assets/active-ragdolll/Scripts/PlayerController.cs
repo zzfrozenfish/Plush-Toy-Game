@@ -62,6 +62,8 @@ public class PlayerController : MonoBehaviour
                 isGrounded = false;
             }
         }
+
+
     }
 
     void FixedUpdate()
